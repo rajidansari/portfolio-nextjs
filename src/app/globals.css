@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap');
 @import "tailwindcss";
+
+
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-fira: 'Fira Code', monospace;
 }
 
 @theme inline {
@@ -44,17 +48,13 @@ body {
   .padding-main {
     @apply px-[1rem] sm:px-[5rem] md:px-[7rem] lg:px-[23.05rem]
   }
-
-  .font-fira {
-    @apply font-[fira_code]
-  }
 }
 
 @keyframes slide {
   0% { transform: translateY(0%); }
-  25% { transform: translateY(-100%); }
-  50% { transform: translateY(-200%); }
-  75% { transform: translateY(0%); }
+  33% { transform: translateY(-100%); }
+  66% { transform: translateY(-200%); }
+  /* 75% { transform: translateY(0%); } */
   100% { transform: translateY(0%); }
 }
 

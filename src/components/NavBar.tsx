@@ -51,13 +51,13 @@ export default function NavBar() {
                     <div className=" flex gap-5 sm:gap-4 md:gap-7 lg:gap-10 transition-all">
                         <a
                             href="https://docs.google.com/document/d/1BlqHB0GJZ22tqViU3iMiuw3DohaenYVT/edit?usp=drive_link&ouid=111185999900777347746&rtpof=true&sd=true"
-                            className="text-[15px] text-gray-500 font-fira hover:text-gray-600"
+                            className="text-[15px] text-gray-500 font-mono hover:text-gray-600"
                         >
                             Resume
                         </a>
                         <Link
                             href="/blogs"
-                            className="text-[15px] text-gray-500 font-fira hover:text-gray-600"
+                            className="text-[15px] text-gray-500 font-mono hover:text-gray-600"
                         >
                             Blogs
                         </Link>
