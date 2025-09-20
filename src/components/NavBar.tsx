@@ -30,7 +30,7 @@ export default function NavBar() {
     return (
         <>
             <div className="w-full h-2 bg-white fixed top-0 left-0 z-10"></div>
-            <nav className="w-full bg-white px-[1rem] sm:px-[5rem] md:px-[7rem] lg:px-[23rem] border-outside transition-all flex justify-between items-center fixed top-2 left-0 z-10">
+            <nav className="w-full bg-white px-[1rem] sm:px-[5rem] md:px-[7rem] lg:px-[23rem] border-outside transition-all flex justify-between items-center fixed top-2 left-0 z-10 selection:text-gray-50 selection:bg-black">
                 <div
                     className={`w-full h-12 border-left border-right flex justify-between items-center px-2`}
                 >
@@ -49,15 +49,15 @@ export default function NavBar() {
 
                     {/* links */}
                     <div className=" flex gap-5 sm:gap-4 md:gap-7 lg:gap-10 transition-all">
-                        <Link
-                            href="/resume"
-                            className="text-[16px] text-gray-500 font-fira hover:text-gray-600"
+                        <a
+                            href="https://docs.google.com/document/d/1BlqHB0GJZ22tqViU3iMiuw3DohaenYVT/edit?usp=drive_link&ouid=111185999900777347746&rtpof=true&sd=true"
+                            className="text-[15px] text-gray-500 font-fira hover:text-gray-600"
                         >
                             Resume
-                        </Link>
+                        </a>
                         <Link
                             href="/blogs"
-                            className="text-[16px] text-gray-500 font-fira hover:text-gray-600"
+                            className="text-[15px] text-gray-500 font-fira hover:text-gray-600"
                         >
                             Blogs
                         </Link>

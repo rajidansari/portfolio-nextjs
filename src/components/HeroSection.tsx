@@ -17,7 +17,7 @@ const myFont = localFont({
 export default function HeroSection() {
     return (
         <div>
-            <div className="w-full h-[12rem] sm:h-[14rem] md:h-[16rem] lg:h-[20rem] px-[1rem] sm:px-[5rem] md:px-[7rem] lg:px-[23.05rem] border-bottom transition-all relative">
+            <div className="w-full h-[12rem] sm:h-[14rem] md:h-[16rem] lg:h-[20rem] padding-main border-bottom transition-all relative">
                 <div className="h-full w-full flex items-center justify-center border-left border-right overflow-hidden relative">
                     <div
                         className={cn(

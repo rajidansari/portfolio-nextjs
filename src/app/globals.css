@@ -41,6 +41,9 @@ body {
   .border-right {
    @apply border-r-gray-200 border-r-[1px];
   }
+  .padding-main {
+    @apply px-[1rem] sm:px-[5rem] md:px-[7rem] lg:px-[23.05rem]
+  }
 
   .font-fira {
     @apply font-[fira_code]
