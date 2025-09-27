@@ -32,7 +32,7 @@ export default function Info() {
     return (
         <>
             {/* separator */}
-            <div className="w-full h-8 padding-main border-outside bg-gray-50">
+            <div className="w-full h-8 padding-main border-outside bg-line">
                 <div className="w-full h-full border-left border-right"></div>
             </div>
             {/* main content */}
@@ -52,7 +52,7 @@ export default function Info() {
             </div>
 
             {/* separator */}
-            <div className="w-full h-8 padding-main border-outside bg-gray-50">
+            <div className="w-full h-8 padding-main border-outside bg-line">
                 <div className="w-full h-full border-left border-right"></div>
             </div>
         </>

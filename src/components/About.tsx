@@ -25,7 +25,7 @@ Let's Collaborate...`;
                 </div>
             </div>
 
-			<div className="w-full h-8 padding-main border-top border-bottom">
+			<div className="w-full h-8 padding-main border-top border-bottom bg-line">
                 <div className="h-full border-left border-right"></div>
             </div>
         </div>

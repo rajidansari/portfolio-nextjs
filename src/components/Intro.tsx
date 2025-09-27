@@ -21,7 +21,7 @@ export function DesignationPart() {
                     </div>
                 </div>
                 <div className="w-[80%] h-full ">
-                    <div className="border-bottom h-[53%] px-2 text-wrap overflow-hidden lg:px-5 flex items-end">
+                    <div className="border-bottom h-[53%] px-2 text-wrap overflow-hidden lg:px-5 flex items-end bg-line">
                         <p
                             id="title"
                             className={`text-[9px] text-zinc-300 tracking-wide font-mono select-none`}

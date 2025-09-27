@@ -46,7 +46,11 @@ body {
    @apply border-r-gray-200 border-r-[1px];
   }
   .padding-main {
-    @apply px-[1rem] sm:px-[5rem] md:px-[7rem] lg:px-[23.05rem]
+    @apply px-[1rem] sm:px-[5rem] md:px-[7rem] lg:px-[23.05rem];
+  }
+
+  .bg-line {
+    @apply bg-[repeating-linear-gradient(135deg,#e4f4e7_0px,#e4f4e7_1px,transparent_1px,transparent_6px)];
   }
 }
 
@@ -54,7 +58,6 @@ body {
   0% { transform: translateY(0%); }
   33% { transform: translateY(-100%); }
   66% { transform: translateY(-200%); }
-  /* 75% { transform: translateY(0%); } */
   100% { transform: translateY(0%); }
 }
 

@@ -15,14 +15,13 @@ export default function NavBar() {
 
     useGSAP(() => {
         gsap.from(logoRef.current, {
-			y: 20,
-			opacity: 0,
-			duration: 0.4,
+			y: 50,
+			duration: 0.3,
 			scrollTrigger: {
 				trigger: logoRef.current,
-				start: "top -19%",
-				end: "top -23%",
-				scrub: 1
+				start: "top -16.5%",
+				end: "top -20%",
+				scrub: 1,
 			}
 		});
     });
@@ -30,7 +29,7 @@ export default function NavBar() {
     return (
         <>
             <div className="w-full h-2 bg-white fixed top-0 left-0 z-10"></div>
-            <nav className="w-full bg-white px-[1rem] sm:px-[5rem] md:px-[7rem] lg:px-[23rem] border-outside transition-all flex justify-between items-center fixed top-2 left-0 z-10 selection:text-gray-50 selection:bg-black">
+            <nav className="w-full bg-white px-[1rem] sm:px-[5rem] md:px-[7rem] lg:px-[23rem] border-outside transition-all flex justify-between items-center fixed top-2 left-0 z-10 selection:text-gray-50 selection:bg-black overflow-hidden">
                 <div
                     className={`w-full h-12 border-left border-right flex justify-between items-center px-2`}
                 >
