@@ -3,6 +3,7 @@ import { LuCodeXml } from "react-icons/lu";
 import { IoLocationOutline } from "react-icons/io5";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { TfiWorld } from "react-icons/tfi";
+import SectionSeparator from "./SectionSeparator";
 
 
 export default function Info() {
@@ -31,10 +32,7 @@ export default function Info() {
 
     return (
         <>
-            {/* separator */}
-            <div className="w-full h-8 padding-main border-outside bg-line">
-                <div className="w-full h-full border-left border-right"></div>
-            </div>
+            <SectionSeparator />
             {/* main content */}
             <div className="w-full  padding-main border-bottom">
                 <div className="w-full h-full p-2 md:p-4 lg:p-4 border-left border-right">
@@ -51,10 +49,7 @@ export default function Info() {
                 </div>
             </div>
 
-            {/* separator */}
-            <div className="w-full h-8 padding-main border-outside bg-line">
-                <div className="w-full h-full border-left border-right"></div>
-            </div>
+            <SectionSeparator />
         </>
     );
 }

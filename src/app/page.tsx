@@ -1,6 +1,7 @@
 import Info from "@/components/Info";
 import HeroSection from "@/components/HeroSection";
 import About from "@/components/About";
+import Social from "@/components/Social";
 
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
             <HeroSection />
             <Info />
             <About />
+            <Social />
         </div>
     );
 }

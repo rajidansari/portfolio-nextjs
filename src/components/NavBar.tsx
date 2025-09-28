@@ -33,10 +33,10 @@ export default function NavBar() {
                 <div
                     className={`w-full h-12 border-left border-right flex justify-between items-center px-2`}
                 >
-                    <div>
+                    <div ref={logoRef}>
                         <Link className="" href={"/"}>
                             <Image
-								ref={logoRef}
+								
                                 className="sm:w-8 lg:w-[38px] rounded-md"
                                 width={"35"}
                                 src={logo}
