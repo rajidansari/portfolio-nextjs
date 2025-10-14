@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "../../public/assets/r_logo.png";
+import logo from "../../public/images/r_logo.png";
 import { cn } from "@/lib/utils";
 import localFont from "next/font/local";
 import { AR_One_Sans } from "next/font/google";

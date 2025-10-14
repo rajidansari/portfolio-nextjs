@@ -2,6 +2,8 @@ import Info from "@/components/Info";
 import HeroSection from "@/components/HeroSection";
 import About from "@/components/About";
 import Social from "@/components/Social";
+import Stack from "@/components/Stack";
+import Projects from "@/components/Projects";
 
 
 export default function Home() {
@@ -11,6 +13,8 @@ export default function Home() {
             <Info />
             <About />
             <Social />
+            <Stack />
+            <Projects />
         </div>
     );
 }

@@ -5,7 +5,7 @@ import { MdArrowOutward } from "react-icons/md";
 export default function SocialLink({
     socials,
 }: {
-    socials: { icon: any; platform: string; username: string; link: string }[];
+    socials: { icon: string; platform: string; username: string; link: string }[];
 }) {
     return (
         <>
@@ -14,11 +14,11 @@ export default function SocialLink({
                     key={social.platform}
                     href={social.link}
                     target="_blank"
-                    className="w-full md:w-[48.5%] lg:w-[48.5%] min-h-[5rem] border-right border-bottom md:border-left lg:border-left flex items-center group"
+                    className="w-full md:w-[48.5%] lg:w-[48.5%] min-h-[5rem] border-right border-left border-bottom flex items-center group"
                 >
                     <div className="w-[20%] h-full flex items-center justify-center ">
                         <div className="h-[75%] w-[75%] rounded-md overflow-hidden">
-							<Image src={social.icon} alt={`${social.platform}`} className="h-full w-full rounded-lg" />
+							<Image src={social.icon} alt={`${social.platform}`} width={50} height={50} className="h-full w-full rounded-lg" />
 						</div>
                     </div>
                     <div className="w-[74%] h-full flex flex-col justify-center ">

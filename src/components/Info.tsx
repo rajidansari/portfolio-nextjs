@@ -41,7 +41,7 @@ export default function Info() {
                             <span className="bg-gray-100 flex items-center justify-center rounded-md p-1">
                                 {item.icon}
                             </span>
-                            <p className="text-zinc-800 text-sm md:text-lg lg:text-[1rem] font-mono font-light">
+                            <p className="text-zinc-800 text-sm md:text-lg lg:text-[1rem] font-[Fira_Code] font-light">
                                 {item.text}
                             </p>
                         </div>

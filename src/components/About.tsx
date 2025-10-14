@@ -1,5 +1,5 @@
 import React from "react";
-import SectionSeparator from "./SectionSeparator";
+import SectionSeparator from "@/components/SectionSeparator";
 
 export default function About() {
     const about = `Hello World! I’m Rajid Ansari — a BCA student and web developer who loves building things that people can actually use.\n

@@ -1,8 +1,7 @@
 import Image from "next/image";
-import me from "../../public/assets/me_animify.png";
+import me from "../../public/images/me_animify.png";
 import TextSlider from "./TextSlider";
 import localFont from "next/font/local";
-
 const myFont = localFont({
     src: "../../public/fonts/Montserrat.ttf",
 });
