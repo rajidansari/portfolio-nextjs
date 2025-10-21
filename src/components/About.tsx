@@ -1,5 +1,6 @@
 import React from "react";
 import SectionSeparator from "@/components/SectionSeparator";
+import Title from "./Title";
 
 export default function About() {
     const about = `Hello World! I’m Rajid Ansari — a BCA student and web developer who loves building things that people can actually use.\n
@@ -10,11 +11,7 @@ Let's connect & collaborate!`;
 
     return (
         <div className="w-full border-bottom border-top">
-            <div className="w-full h-8 padding-main border-bottom">
-                <div className="h-full border-left border-right text-2xl font-semibold px-2">
-                    About
-                </div>
-            </div>
+            <Title title={"About"} />
 
             <div className="w-full min-h-[12rem] padding-main border-top">
                 <div className="w-full h-full  border-left border-right">

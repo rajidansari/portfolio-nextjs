@@ -34,12 +34,24 @@ export default function Stack() {
             title: "MongoDB",
         },
         {
+            path: "/images/nodejs.png",
+            title: "Node JS",
+        },
+        {
+            path: "/images/express.svg",
+            title: "Express JS",
+        },
+        {
             path: "/images/git.png",
             title: "Git",
         },
         {
             path: "/images/github.png",
             title: "GitHub",
+        },
+        {
+            path: "/images/gsap.svg",
+            title: "GSAP",
         },
     ];
 
@@ -48,15 +60,16 @@ export default function Stack() {
             <Title title={"Stack"} />
             {/* stack div*/}
             <div className="w-full h-auto padding-main ">
-                <div className="min-h-[7rem] w-full flex flex-wrap gap-3 border-left border-right p-3">
+                <div className="min-h-[7rem] w-full flex flex-wrap gap-5 border-left border-right p-3">
                     {images.map((image) => (
                         <div className="w-fit h-fit group relative" key={image.title}>
-                            <div className={`py-1 px-3 text-[10px] bg-gray-200 text-center rounded hidden group-hover:block transition-all duration-200 absolute -top-7 -left-1 text-nowrap text-gray-800 font-semibold font-[fira_Code]`}>{image.title}</div>
+                            <div className={`py-2 px-4 text-[12px] bg-gray-900 text-center rounded scale-0 group-hover:scale-100 transition-all duration-200 absolute -top-10 -left-5 text-nowrap text-gray-100 font-semibold font-[fira_Code]`}>{image.title}</div>
                             <Image
                                 src={image.path}
-                                width={40}
-                                height={40}
+                                width={32}
+                                height={32}
                                 alt={image.title}
+                                className="h-auto "
                             />
                         </div>
                     ))}

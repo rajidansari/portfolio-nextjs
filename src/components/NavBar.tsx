@@ -15,28 +15,29 @@ export default function NavBar() {
 
     useGSAP(() => {
         gsap.from(logoRef.current, {
-			y: 50,
-			duration: 0.3,
-			scrollTrigger: {
-				trigger: logoRef.current,
-				start: "top -16.5%",
-				end: "top -20%",
-				scrub: 1,
-			}
-		});
-    });
+            y: 50,
+            duration: 0.3,
+            scrollTrigger: {
+                trigger: logoRef.current,
+                start: "top -16.5%",
+                end: "top -20%",
+                scrub: 1,
+            },
+        });
+    })
 
     return (
         <>
             <div className="w-full h-2 bg-white fixed top-0 left-0 z-10"></div>
-            <nav className="w-full bg-white px-[1rem] sm:px-[5rem] md:px-[7rem] lg:px-[23rem] border-outside transition-all flex justify-between items-center fixed top-2 left-0 z-10 selection:text-gray-50 selection:bg-black overflow-hidden">
+            <nav
+                className="w-full bg-white px-[1rem] sm:px-[5rem] md:px-[7rem] lg:px-[23rem] border-outside transition-all flex justify-between items-center fixed top-2 left-0 z-10 selection:text-gray-50 selection:bg-black overflow-hidden"
+            >
                 <div
                     className={`w-full h-12 border-left border-right flex justify-between items-center px-2`}
                 >
                     <div ref={logoRef}>
                         <Link className="" href={"/"}>
                             <Image
-								
                                 className="sm:w-8 lg:w-[38px] rounded-md"
                                 width={"35"}
                                 src={logo}
@@ -50,13 +51,14 @@ export default function NavBar() {
                     <div className=" flex gap-5 sm:gap-4 md:gap-7 lg:gap-10 transition-all">
                         <a
                             href="https://docs.google.com/document/d/1BlqHB0GJZ22tqViU3iMiuw3DohaenYVT/edit?usp=drive_link&ouid=111185999900777347746&rtpof=true&sd=true"
-                            className="text-[15px] text-gray-500 font-mono hover:text-gray-600"
+                            className="text-[15px] text-gray-500 font-[fira_Code] hover:text-gray-600"
+                            target="_blank"
                         >
                             Resume
                         </a>
                         <Link
                             href="/blogs"
-                            className="text-[15px] text-gray-500 font-mono hover:text-gray-600"
+                            className="text-[15px] text-gray-500 font-[fira_Code] hover:text-gray-600"
                         >
                             Blogs
                         </Link>
