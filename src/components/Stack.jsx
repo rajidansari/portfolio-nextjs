@@ -63,7 +63,7 @@ export default function Stack() {
                 <div className="min-h-[7rem] w-full flex flex-wrap gap-5 border-left border-right p-3">
                     {images.map((image) => (
                         <div className="w-fit h-fit group relative" key={image.title}>
-                            <div className={`py-2 px-4 text-[12px] bg-gray-900 text-center rounded scale-0 group-hover:scale-100 transition-all duration-200 absolute -top-10 -left-5 text-nowrap text-gray-100 font-semibold font-[fira_Code]`}>{image.title}</div>
+                            <div className={`py-1 px-3 text-[12px] bg-gray-900 text-center rounded scale-0 group-hover:scale-100 transition-all duration-200 absolute -top-10 -left-5 text-nowrap text-gray-100 font-semibold font-[fira_Code]`}>{image.title}</div>
                             <Image
                                 src={image.path}
                                 width={32}
