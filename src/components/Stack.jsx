@@ -53,6 +53,14 @@ export default function Stack() {
             path: "/images/gsap.svg",
             title: "GSAP",
         },
+        {
+            path: "/images/nextjs.svg",
+            title: "Next JS",
+        },
+        {
+            path: "/images/react-router.svg",
+            title: "React Router",
+        },
     ];
 
     return (
