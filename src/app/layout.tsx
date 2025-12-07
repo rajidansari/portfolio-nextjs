@@ -13,9 +13,21 @@ const geistMono = Geist_Mono({
     subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-    title: "Rajid Ansari - Frontend Developer",
-    description: "Frontend Developer",
+export const metadata = {
+    title: "Rajid Ansari — Frontend Developer",
+    description:
+        "A sleek, minimal dev portfolio showcasing my work, projects, and ideas.",
+    keywords: ["Rajid Ansari", "Developer", "Portfolio", "Frontend Developer"],
+    authors: [{ name: "Rajid Ansari" }],
+    metadataBase: new URL("https://rajidansari.vercel.app"),
+    openGraph: {
+        title: "Rajid Ansari",
+        description: "Frontend Developer Portfolio",
+        url: "https://rajidansari.vercel.app",
+        siteName: "Rajid Ansari",
+        type: "website",
+        images: "/og.png",
+    },
 };
 
 export default function RootLayout({
@@ -25,6 +37,20 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
+            <head>
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify({
+                            "@context": "https://schema.org",
+                            "@type": "Person",
+                            name: "Rajid Ansari",
+                            url: "https://rajidansari.vercel.app",
+                            jobTitle: "Frontend Developer",
+                        }),
+                    }}
+                />
+            </head>
             <body
                 className={`${geistSans.variable} ${geistMono.variable} antialiased`}
             >
