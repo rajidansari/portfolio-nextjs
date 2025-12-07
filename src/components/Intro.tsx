@@ -6,7 +6,7 @@ const myFont = localFont({
     src: "../../public/fonts/Montserrat.ttf",
 });
 
-export function DesignationPart() {
+export default function Intro() {
     return (
         <div className="w-full h-[9rem] sm:h-[8rem] md:h-[9rem] lg:h-[9.8rem] px-[1rem] sm:px-[5rem] md:px-[7rem] lg:px-[23.05rem] border-bottom transition-all relative ">
             <div className="h-full w-full border-left border-right flex ">

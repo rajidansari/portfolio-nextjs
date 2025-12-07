@@ -4,6 +4,7 @@ import About from "@/components/About";
 import Social from "@/components/Social";
 import Stack from "@/components/Stack";
 import Projects from "@/components/Projects";
+import Footer from "@/components/Footer";
 
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
             <Social />
             <Stack />
             <Projects />
+            <Footer />
         </div>
     );
 }

@@ -1,18 +1,8 @@
 import Image from "next/image";
 import logo from "../../public/images/r_logo.png";
 import { cn } from "@/lib/utils";
-import localFont from "next/font/local";
-import { AR_One_Sans } from "next/font/google";
-import { DesignationPart } from "./Intro";
+import Intro from "./Intro";
 
-const arOneSans = AR_One_Sans({
-    subsets: ["latin"],
-    weight: "700",
-});
-
-const myFont = localFont({
-    src: "../../public/fonts/FiraCode.ttf",
-});
 
 export default function HeroSection() {
     return (
@@ -37,7 +27,7 @@ export default function HeroSection() {
                     />
                 </div>
             </div>
-            <DesignationPart myFont={myFont} />
+            <Intro />
         </div>
     );
 }
