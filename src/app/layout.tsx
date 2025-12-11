@@ -28,6 +28,15 @@ export const metadata = {
         type: "website",
         images: "/og.png",
     },
+    icons: {
+        icon: "/favicon.ico",
+        shortcut: "/favicon.ico",
+        apple: "/apple-touch-icon.png",
+        other: {
+            rel: "mask-icon",
+            url: "/icon.png",
+        },
+    },
 };
 
 export default function RootLayout({
@@ -50,7 +59,10 @@ export default function RootLayout({
                         }),
                     }}
                 />
-                <meta name="google-site-verification" content="YPTupsWChNjl4KkPSfryrv2cZS13Y7BfszoA33sIuy0" />
+                <meta
+                    name="google-site-verification"
+                    content="YPTupsWChNjl4KkPSfryrv2cZS13Y7BfszoA33sIuy0"
+                />
             </head>
             <body
                 className={`${geistSans.variable} ${geistMono.variable} antialiased`}
