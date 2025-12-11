@@ -26,7 +26,7 @@ export default function Info() {
         {
             serial: 4,
             icon: <TfiWorld className="inline text-zinc-500" />,
-            text: <a href={"/"} className="hover:border-b">iamrajid.vercel.app</a>,
+            text: <a href={"/"} className="hover:border-b">rajidansari.vercel.app</a>,
         },
     ];
 
