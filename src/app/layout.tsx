@@ -13,20 +13,51 @@ const geistMono = Geist_Mono({
     subsets: ["latin"],
 });
 
-export const metadata = {
-    title: "Rajid Ansari — Frontend Developer",
-    description:
-        "A sleek, minimal dev portfolio showcasing my work, projects, and ideas.",
-    keywords: ["Rajid Ansari", "Developer", "Portfolio", "Frontend Developer"],
-    authors: [{ name: "Rajid Ansari" }],
+export const metadata: Metadata = {
     metadataBase: new URL("https://rajidansari.vercel.app"),
+    title: "Rajid Ansari | Full-Stack Developer (Node.js & React)",
+    description:
+        "Rajid Ansari is a full-stack developer in New Delhi building REST APIs, PostgreSQL backends, and React apps. Explore projects like Hireflow and get in touch.",
+    keywords: [
+        "Rajid Ansari",
+        "Full-Stack Developer",
+        "Backend Developer",
+        "Node.js Developer",
+        "React Developer",
+        "Developer Portfolio",
+    ],
+    authors: [{ name: "Rajid Ansari", url: "https://rajidansari.vercel.app" }],
+    creator: "Rajid Ansari",
+    alternates: {
+        canonical: "/",
+    },
+    robots: {
+        index: true,
+        follow: true,
+    },
     openGraph: {
-        title: "Rajid Ansari",
-        description: "Frontend Developer Portfolio",
+        title: "Rajid Ansari | Full-Stack Developer (Node.js & React)",
+        description:
+            "Full-stack developer building REST APIs, PostgreSQL backends, and React apps. See my projects and get in touch.",
         url: "https://rajidansari.vercel.app",
         siteName: "Rajid Ansari",
+        locale: "en_IN",
         type: "website",
-        images: "/og.png",
+        images: [
+            {
+                url: "/og.png",
+                width: 1200,
+                height: 630,
+                alt: "Rajid Ansari, Full-Stack Developer",
+            },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Rajid Ansari | Full-Stack Developer (Node.js & React)",
+        description:
+            "Full-stack developer building REST APIs, PostgreSQL backends, and React apps.",
+        images: ["/og.png"],
     },
     icons: {
         icon: "/favicon.ico",
@@ -37,6 +68,27 @@ export const metadata = {
             url: "/icon.png",
         },
     },
+};
+
+const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Rajid Ansari",
+    url: "https://rajidansari.vercel.app",
+    image: "https://rajidansari.vercel.app/og.png",
+    jobTitle: "Full-Stack Developer",
+    description:
+        "Full-stack developer building REST APIs, PostgreSQL backends, and React apps.",
+    address: {
+        "@type": "PostalAddress",
+        addressLocality: "New Delhi",
+        addressCountry: "IN",
+    },
+    knowsAbout: ["Node.js", "PostgreSQL", "React", "REST APIs", "Next.js"],
+    sameAs: [
+        "https://github.com/rajidansari",
+        "https://www.linkedin.com/in/rajidansari",
+    ],
 };
 
 export default function RootLayout({
@@ -50,13 +102,7 @@ export default function RootLayout({
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{
-                        __html: JSON.stringify({
-                            "@context": "https://schema.org",
-                            "@type": "Person",
-                            name: "Rajid Ansari",
-                            url: "https://rajidansari.vercel.app",
-                            jobTitle: "Frontend Developer",
-                        }),
+                        __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
                     }}
                 />
                 <meta

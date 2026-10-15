@@ -18,7 +18,7 @@ interface Project {
 
 const Projects = () => {
     const [openProjectDetails, setOpenProjectDetails] = useState<null | number>(
-        0
+        0,
     );
 
     const openDetails = (id: number) => {
@@ -28,28 +28,42 @@ const Projects = () => {
     const projects = [
         {
             id: 0,
-            icon: "/images/r_logo.png",
-            title: "Portfolio",
-            link: "/",
-            desc: `A sleek and minimal dev portfolio and personal blog.`,
+            icon: "/images/hireflow.png",
+            title: "Hireflow - Job Board",
+            link: "https://hireflow0.vercel.app",
+            github: "https://github.com/rajidansari/hireflow-backend",
+            desc: `A job board where employers post openings and manage applicants, and candidates search and apply. I built both the React app and the REST API behind it.`,
             featured: [
-                `Clean, modern & responsive design`,
-                `SEO optimized (with sitemap, robots)`,
-                `Subtle & soft browsing experience.`,
+                // Employer side
+                `Employer dashboard listing all of their posted jobs`,
+                `Per-job view of every application received for that job`,
+                `Update an application's status (e.g. Pending, Reviewed, Hired, Rejected) from the dashboard`,
+
+                // Candidate side
+                `Candidates can search jobs with filters and pagination`,
+                `Apply to jobs with a resume upload`,
+                `Candidates can track their application status as employers update it`,
+
+                // Platform
+                `Role-based access separating employer and candidate features`,
+                `Secure auth: short-lived JWTs, httpOnly refresh cookies, silent session restore`,
+                `OTP email verification and password reset`,
+                `Swagger-documented REST API with a Dockerized backend`,
             ],
         },
         {
             id: 1,
             icon: "/images/passguard.png",
-            title: "Passguard - Password Manager",
+            title: "PassGuard - Password Manager",
             link: "https://passguard0.vercel.app",
-            desc: `A clean, modern, and secure password manager crafted with the MERN stack.`,
+            github: "https://github.com/rajidansari/pass-guard",
+            desc: `A full-stack password manager built with the MERN stack to securely store, organize, and access passwords through an intuitive vault.`,
             featured: [
-                `Encrypted vault using AES-256 Crypto APIs`,
-                `Authentication with secure cookie handling`,
-                `Minimal dashboard with smooth, subtle interactions`,
-                `One-tap copy and built-in strong password generation`,
-                `Fully responsive, frictionless multi-device experience`,
+                `AES-256-CBC encryption for stored passwords using Node.js crypto`,
+                `Cookie-based authentication and protected routes`,
+                `Credential management with one-tap copy and password visibility controls`,
+                `Built-in strong password generator`,
+                `Searchable vault with a responsive interface`,
             ],
         },
     ];
@@ -118,30 +132,58 @@ const Projects = () => {
                         </div>
 
                         {/* project details */}
+                        <div
+                            className={`grid transition-[grid-template-rows] duration-300 ease-in-out ${
+                                openProjectDetails === project.id
+                                    ? "grid-rows-[1fr]"
+                                    : "grid-rows-[0fr]"
+                            }`}
+                        >
+                            <div className="overflow-hidden">
+                                <div className="details pb-4 text-gray-700">
+                                    <div className="px-3 pt-1 font-[Fira_Code]">
+                                        <p className="text-gray-900">
+                                            {project.desc}
+                                        </p>
 
-                        {openProjectDetails === project.id ? (
-                            <div
-                                className={`details pb-4 text-gray-700`}
-                            >
-                                <div className="px-3 pt-1 h-fit font-[Fira_Code] transition-all duration-300 ease-linear ">
-                                    <p className="text-gray-900">
-                                        {" "}
-                                        {project.desc}{" "}
-                                    </p>
-                                    <div className="mt-7 mb-2">
-                                        {project.featured.map((feat, index) => (
-                                            <span
-                                                key={index}
-                                                className="flex items-center gap-2 text-sm pb-1"
+                                        <div className="mt-7 mb-2">
+                                            {project.featured.map(
+                                                (feat, index) => (
+                                                    <span
+                                                        key={index}
+                                                        className="flex items-center gap-2 text-sm pb-1"
+                                                    >
+                                                        <BsFillCircleFill className="text-[5px] text-gray-400 shrink-0" />
+                                                        <p>{feat}</p>
+                                                    </span>
+                                                ),
+                                            )}
+                                        </div>
+
+                                        <div className="flex gap-4 mt-4 text-sm">
+                                            <a
+                                                href={project.link}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="border-b border-zinc-800 hover:text-black"
                                             >
-                                                <BsFillCircleFill className="text-[5px] text-gray-400" />
-                                                <p>{feat}</p>
-                                            </span>
-                                        ))}
+                                                Live
+                                            </a>
+                                            {project.github && (
+                                                <a
+                                                    href={project.github}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="border-b border-zinc-800 hover:text-black"
+                                                >
+                                                    Code
+                                                </a>
+                                            )}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        ) : null}
+                        </div>
                     </div>
                 ))}
                 {/* project container ends here */}

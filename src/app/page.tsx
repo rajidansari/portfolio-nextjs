@@ -6,7 +6,6 @@ import Stack from "@/components/Stack";
 import Projects from "@/components/Projects";
 import Footer from "@/components/Footer";
 
-
 export default function Home() {
     return (
         <div className="h-auto w-full bg-white transition-all selection:text-gray-50 selection:bg-black overflow-x-hidden">
@@ -14,8 +13,8 @@ export default function Home() {
             <Info />
             <About />
             <Social />
-            <Stack />
             <Projects />
+            <Stack />
             <Footer />
         </div>
     );
