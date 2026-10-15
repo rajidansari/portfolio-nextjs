@@ -12,6 +12,7 @@ interface Project {
     icon: string;
     title: string;
     link: string;
+    github: string;
     desc: string;
     featured: string[];
 }
